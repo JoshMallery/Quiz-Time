@@ -6,7 +6,20 @@ const SideBar = () => {
 
   return (
     <div className="sidebar">
-      This is the sidebar for now.
+      <NavLink className="nav-button" exact to="/">
+        Home
+      </NavLink>
+      <br/>
+      <br/>
+      <NavLink className="nav-button" to="/settings">
+        Trivia Settings
+      </NavLink>
+      <br/>
+      <br/>
+      <NavLink className="nav-button" to="/trivia">
+        Play Trivia
+      </NavLink>
+
     </div>
   )
 
