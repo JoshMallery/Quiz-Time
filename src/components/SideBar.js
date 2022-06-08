@@ -3,11 +3,11 @@ import { NavLink, Link } from "react-router-dom";
 import "./Sidebar.css"
 
 const SideBar = () => {
-
+//considering deleting the link to the welcome page
   return (
     <div className="sidebar">
       <NavLink className="nav-button" exact to="/">
-        Home
+        Welcome Page
       </NavLink>
       <br/>
       <br/>

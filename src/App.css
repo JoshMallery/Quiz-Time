@@ -10,6 +10,8 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-around;
   height: 150px;
   width:100%;
 }

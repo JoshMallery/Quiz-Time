@@ -5,6 +5,7 @@ import Form from "./components/Form";
 import TriviaContainer from "./components/TriviaContainer";
 import apiCalls from "./apiCalls.js";
 import './App.css';
+import logoImage from "./images/quizTimeLogo.png"
 
 const App = () => {
     const [questions, setQuestions] = useState([]);
@@ -30,8 +31,9 @@ const App = () => {
   return (
     <main className="App">
       <header className="header">
+        <img src={logoImage} alt="Quiz-Time Logo of a stack of books"/>
         <p>
-        It's Quizzzzzz Time Y'alllll in the header
+        Where your trivia needs are served!
         </p>
       </header>
       <div className="content">
