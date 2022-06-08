@@ -31,7 +31,7 @@ const App = () => {
     <main className="App">
       <header className="header">
         <p>
-        It's Quizzzzzz Time Y'alllll
+        It's Quizzzzzz Time Y'alllll in the header
         </p>
       </header>
       <div className="content">
@@ -39,11 +39,11 @@ const App = () => {
           <SideBar />
         </div>
         <div className="routes">
-          { error && <h2></h2> }
+          {error && <h2>An Error has occured.</h2>}
           <Switch>
             <Route exact path="/" render={() => <p>Home Page</p>} />
             <Route path ="/settings" render={() => <Form buildQuery={buildQuery}/>} />
-            <Route path ="/trivia" render={() => { questions.length === 0 ? <h2>Please go to settings and select your trivia categories first!</h2> : <TriviaContainer questions={questions}/> }} />
+            <Route path ="/trivia" render={() =>  questions.length === 0 ? <h2>Please go to settings and select your trivia categories first!</h2> : <TriviaContainer questions={questions}/> } />
             <Route render={() => <h2>No Trivia here! Click Home and Try Again!</h2>} />
           </Switch>
         </div>
