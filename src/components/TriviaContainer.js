@@ -3,11 +3,10 @@ import Card from "./Card";
 import Score from "./Score";
 import "./TriviaContainer.css";
 
-const TriviaContainer = () => {
+const TriviaContainer = ({questions}) => {
+  const questionCards = questions.map(question => <Card question={question} />)
 
-//need way to start the game
-  //need prop of questions
-  //meed map of question cards
+
   //need to send up answer and sent to scoring component
 
 
@@ -20,9 +19,8 @@ const TriviaContainer = () => {
 
   return (
     <div>
-      <Card />
+      {questionCards}
       <Score />
-
     </div>
 
   )
