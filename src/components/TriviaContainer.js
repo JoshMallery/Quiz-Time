@@ -16,7 +16,7 @@ const TriviaContainer = ({questions}) => {
     setCount(count + 1);
 
     let revisedRecord = {...record};
-    
+
     boolean ? revisedRecord.wins += 1 : revisedRecord.losses += 1;
 
     setRecord({...revisedRecord});
@@ -37,7 +37,6 @@ const TriviaContainer = ({questions}) => {
       {questionCards}
       <Score record={record}/>
     </div>
-
   )
 
 }

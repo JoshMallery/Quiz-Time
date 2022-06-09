@@ -28,8 +28,10 @@
 }
 
 .routes {
-   width: 80%;
-   height: 500px;
+  display:flex;
+  flex-direction: column;
+  width: 80%;
+  height: 500px;
 }
 
 .App-logo {

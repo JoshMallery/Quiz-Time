@@ -24,7 +24,7 @@ const Form = ({buildQuery}) => {
         <select name="dropCategory" onChange={(event) => changeHandler(event)}>
           {dropOptions}
         </select>
-
+        <br/>
         <input
           name="category"
           type="number"
