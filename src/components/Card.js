@@ -1,7 +1,10 @@
 import React from "react"
 import "./Card.css"
 
-const Card = () => {
+const Card = ({checkAns,category,correct_answer,incorrect_answers}) => {
+let randomAns = [...incorrect_answers]
+  randomAns.push(correct_answer);
+  randomAns.sort((a, b) => 0.5 - Math.random());
 
 //take in props of question, right answer, wrong answers, onclick function to send answer up
 //can I randomize the wrong and right answers?
