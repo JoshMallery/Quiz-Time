@@ -4,21 +4,19 @@ import Score from "./Score";
 import "./TriviaContainer.css";
 
 const TriviaContainer = ({questions}) => {
-  const [record, setRecord] = useState({ wins:0 , losses:0 }) //wins and losses
-  const [count, setCount] = useState(0)
-  const questionCards = questions.map(question => <Card question={question} />)
-
-
+  const [record, setRecord] = useState({ wins:0 , losses:0 }); //wins and losses
+  const [count, setCount] = useState(0);
+  const questionCards = questions.map(question => <Card question={question} />);
 
   const calcScore = (boolean, questionNumber) => {
-    if(questionNumber === count){
+    if(questionNumber === count) {
       return
     }
 
     setCount(count + 1);
 
     let revisedRecord = {...record};
-
+    
     boolean ? revisedRecord.wins += 1 : revisedRecord.losses += 1;
 
     setRecord({...revisedRecord});
