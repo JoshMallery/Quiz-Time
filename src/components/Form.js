@@ -6,8 +6,8 @@ const Form = ({buildQuery}) => {
   const [category, setCategory] = useState(0)
   const [dropCat, setDropCat] = useState(0)
 
-  let dropOptions = categories.map((item) => <option value={item.id}>{item.category}</option>)
-  dropOptions.unshift(<option value="0">--Please Select a Category --</option>)
+  let dropOptions = categories.map((item) => <option key={item.id} value={item.id}>{item.category}</option>)
+  dropOptions.unshift(<option key="0" value="0">--Please Select a Category --</option>)
 
   const changeHandler = (event) => {
     event.target.name === "category" ? setCategory(event.target.value) : setDropCat(event.target.value)

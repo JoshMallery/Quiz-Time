@@ -8,10 +8,10 @@ const TriviaContainer = ({questions}) => {
   const [count, setCount] = useState(0);
 
   const checkAns = (ans) => {
-    ans === questionCards[count].correct_answer ? calcScore(true) : calcScore(false);
+    ans === questions[count].correct_answer ? calcScore(true) : calcScore(false);
   }
 
-  const questionCards = questions.map(question => <Card {...question} checkAns={checkAns} />);
+  const questionCards = questions.map((question,index) => <Card key={index} {...question} count={count} checkAns={checkAns} />);
   // const calcScore = (boolean) => {
   //   // if(curQuestion === count) {
   //   //   return
@@ -33,6 +33,8 @@ const TriviaContainer = ({questions}) => {
     boolean ? record.wins += 1 : record.losses += 1;
     setRecord(record);
     setCount(count + 1);
+    console.log("record",record)
+    console.log("count", count)
   }
 
   //need to send up answer and sent to check answer component

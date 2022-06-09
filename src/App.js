@@ -22,7 +22,6 @@ const App = () => {
 
 
   const fetchQuestions = (category) => {
-    console.log(category)
     apiCalls.getQuestions(category)
       .then(response => setQuestions(response))//set state of questions to response)
       .catch(error => console.log(error)) //change to error set state??
