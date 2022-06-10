@@ -12,6 +12,9 @@ const TriviaContainer = ({questions}) => {
   }
 
   const questionCards = questions.map((question,index) => <Card key={index} {...question} count={count} curQuestion={index} checkAns={checkAns} />);
+
+  //try having a sort for the answers at this level. 
+
   // const calcScore = (boolean) => {
   //   // if(curQuestion === count) {
   //   //   return

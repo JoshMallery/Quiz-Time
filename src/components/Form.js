@@ -15,7 +15,7 @@ const Form = ({buildQuery}) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    buildQuery(category);
+    buildQuery(dropCat);
   }
 
   return(

@@ -17,6 +17,7 @@ const App = () => {
   const buildQuery = (queryParams) => {
     //saving space to later build complex API queries
     //queryParams should be a number of category at this point
+    console.log("question category to grab",queryParams)
     fetchQuestions(queryParams)
   }
 
