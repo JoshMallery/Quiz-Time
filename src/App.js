@@ -17,12 +17,12 @@ const App = () => {
   const buildQuery = (queryParams) => {
     //saving space to later build complex API queries
     //queryParams should be a number of category at this point
+    console.log("question category to grab",queryParams)
     fetchQuestions(queryParams)
   }
 
 
   const fetchQuestions = (category) => {
-    console.log(category)
     apiCalls.getQuestions(category)
       .then(response => setQuestions(response))//set state of questions to response)
       .catch(error => console.log(error)) //change to error set state??

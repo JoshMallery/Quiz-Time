@@ -1,7 +1,6 @@
 const apiCalls = {
 
   getQuestions(category) {
-    console.log(typeof category)
     return fetch(`https://opentdb.com/api.php?amount=10&category=${category}&difficulty=easy&type=multiple`)
       .then(response => response.json())
       .then(response => response.results)
