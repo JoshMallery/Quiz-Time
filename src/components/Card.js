@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./Card.css"
 
-const Card = ({checkAns,category,correct_answer,incorrect_answers,question, count}) => {
+const Card = ({checkAns,category,correct_answer,incorrect_answers,question, count, curQuestion}) => {
   const [selectedAns, setAnswer] = useState(null);
   let randomAns
   let radioAns
@@ -35,7 +35,7 @@ const onChangeHandler = (ans) => {
     <div className="card">
       <p>{question}</p>
       {radioAns}
-      <button onClick={() => checkAns(selectedAns)}>Submit Answer</button>
+      <button onClick={() => checkAns(selectedAns,curQuestion)}>Submit Answer</button>
     </div>
   )
 

@@ -7,11 +7,11 @@ const TriviaContainer = ({questions}) => {
   const [record, setRecord] = useState({ wins:0 , losses:0 }); //wins and losses
   const [count, setCount] = useState(0);
 
-  const checkAns = (ans) => {
-    ans === questions[count].correct_answer ? calcScore(true) : calcScore(false);
+  const checkAns = (ans,current) => {
+    ans === questions[current].correct_answer ? calcScore(true) : calcScore(false);
   }
 
-  const questionCards = questions.map((question,index) => <Card key={index} {...question} count={count} checkAns={checkAns} />);
+  const questionCards = questions.map((question,index) => <Card key={index} {...question} count={count} curQuestion={index} checkAns={checkAns} />);
   // const calcScore = (boolean) => {
   //   // if(curQuestion === count) {
   //   //   return
