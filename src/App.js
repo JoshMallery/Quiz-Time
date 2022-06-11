@@ -22,7 +22,7 @@ const App = () => {
   const fetchQuestions = (category,questionCount) => {
     apiCalls.getQuestions(category,questionCount)
       .then(response => utilities.cleanText(response))
-      .then(cleanResponse => setQuestions(cleanResponse))//set state of questions to response)
+      .then(cleanResponse => setQuestions(cleanResponse))
       .catch(error => console.log(error)) //change to error set state??
   }
 

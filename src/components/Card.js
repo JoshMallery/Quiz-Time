@@ -3,33 +3,28 @@ import "./Card.css"
 
 const Card = ({checkAns,category,correct_answer,incorrect_answers,question, count, curQuestion}) => {
   const [selectedAns, setAnswer] = useState(null);
-  let randomAns
-  let radioAns
+  const [randomAns, setRandomAns] = useState([])
 
-    randomAns = [...incorrect_answers,correct_answer]
+  let buildRandomAns = [...incorrect_answers,correct_answer]
+      buildRandomAns.sort((a, b) => 0.5 - Math.random());
 
-    // randomAns.sort((a, b) => 0.5 - Math.random()); need a way to sort once or feed it sorted data
+ useEffect(() => {
+   if(!count) {
+     setRandomAns(buildRandomAns)
+    }
+  },[count])
 
-    radioAns = randomAns.map((ans,index) => {
-      return (
-        <>
-        <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
-        <label htmlFor={ans}>{ans}</label>
-        </>)
-      })
+  let radioAns = randomAns.map((ans,index) => {
+    return (
+      <>
+      <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
+      <label htmlFor={ans}>{ans}</label>
+      </>)
+    })
 
-
-
-const onChangeHandler = (ans) => {
-  setAnswer(ans);
-}
-//map random ans to radio buttons?
-//have a button to send the answer back up
-// const onClickHandler = (ans) => {
-//   radioAns.find(eachAns => eachAns.checked )
-//   checkAns(ans)
-// }
-
+  const onChangeHandler = (ans) => {
+    setAnswer(ans);
+  }
 
   return (
     <div className="card">
