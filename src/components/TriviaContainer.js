@@ -54,7 +54,7 @@ const TriviaContainer = ({questions}) => {
   return (
     <div>
     <Score record={record}/>
-        <Carousel>
+        <Carousel showThumbs={false}>
         {questionCards}
         </Carousel>
     </div>

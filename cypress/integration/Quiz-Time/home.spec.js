@@ -1,27 +1,42 @@
 describe('Home Page Tests', () => {
   beforeEach(() => {
-    cy.intercept('https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple', { fixtures: "questions" }) //actually not needed for home page test
     cy.visit('http://localhost:3000/Quiz-Time/')
   })
 
   it('Has a logo', () => {
-    cy.get('.logo').should('have.attr', 2)
+    cy.get('img')
+      .should('exist')
   });
 
-  it.skip('Has three buttons', () => {
-
+  it('Has three buttons', () => {
+      cy.get('.nav-button')
+        .should('have.length',3)
   });
 
-  it.skip('Has a Tag Line', () => {
-
+  it('Has a Tag Line', () => {
+    cy.get('h2')
+      .contains("The place to find Trivia Questions!")
   })
 
-  it.skip('Have content on the homepage', () => {
-
+  it('Have Welcome content on the homepage', () => {
+    cy.get('h1')
+      .contains("Welcome to Quiz Time! All of your Trivia Needs can be had here! Use the navigation on the left hand side to get started!")
   })
 
-  it.skip('should have a url reflect the current page', () => {
-
+  it('should have a url reflect the current page', () => {
+    cy.url()
+      .should('eq','http://localhost:3000/Quiz-Time/')
   });
+
+  it('Should be able to navigate to other Pages', () => {
+    cy.get('.nav-button')
+      .eq(1)
+      .click()
+
+    cy.url()
+      .should('eq','http://localhost:3000/Quiz-Time/settings')
+  });
+
+
 
 })

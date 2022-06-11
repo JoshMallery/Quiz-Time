@@ -6,25 +6,28 @@ describe('Trivia Page Tests', () => {
   })
 
     it('Has a logo', () => {
-      cy.get('.logo').should('have.attr', 2)
+      cy.get('img')
+        .should('exist')
     });
 
-    it('has a dropdown menu', () => {
-
+    it('Has three buttons', () => {
+        cy.get('.nav-button')
+          .should('have.length',3)
     });
 
-    it('has a drop down menu with XX items', () => {
 
-    });
 
-    it('After selecting a drop down menu item and clicking submit, a message should appear.' () => {
-
-    });
-
-    it('should have a url reflect the current page', () => {
+    it.skip('has a drop down menu with XX items', () => {
 
     });
 
-    it('should have a message if it can not fetch results', () => {
+    it.skip('After selecting a drop down menu item and clicking submit, a message should appear.' () => {
+
+    });
+
+
+
+    it.skip('should have a message if it can not fetch results', () => {
 
     })
+})
