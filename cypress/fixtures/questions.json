@@ -1,124 +1,64 @@
 {
 response_code: 0,
 results: [
-  {
-    category: "Entertainment: Cartoon & Animations",
-    type: "multiple",
-    difficulty: "easy",
-    question: "Who was the villain of &#039;&#039;The Lion King&#039;&#039;?",
-    correct_answer: "Scar",
-    incorrect_answers: [
-      "Fred",
-      "Jafar",
-      "Vada"
-    ]
-  },
-  {
-    category: "Sports",
-    type: "multiple",
-    difficulty: "medium",
-    question: "How many scoring zones are there on a conventional dart board?",
-    correct_answer: "82",
-    incorrect_answers: [
-      "62",
-      "42",
-      "102"
-    ]
-  },
 {
-category: "Entertainment: Video Games",
-type: "multiple",
-difficulty: "medium",
-question: "In the game &quot;Undertale&quot;, who was Mettaton&#039;s creator?",
-correct_answer: "Alphys",
-incorrect_answers: [
-"Undyne",
-"Sans",
-"Asgore"
-]
-},
-{
-category: "Entertainment: Video Games",
+category: "Entertainment: Music",
 type: "multiple",
 difficulty: "easy",
-question: "If a &quot;360 no-scope&quot; is one full rotation before shooting, how many rotations would a &quot;1080 no-scope&quot; be?",
-correct_answer: "3",
+question: "Who had a 1983 hit with the song &#039;Africa&#039;?",
+correct_answer: "Toto",
 incorrect_answers: [
-"4",
-"2",
-"5"
+"Foreigner",
+"Steely Dan",
+"Journey"
 ]
 },
 {
-category: "Entertainment: Video Games",
-type: "multiple",
-difficulty: "medium",
-question: "In the game &quot;Cave Story,&quot; what is the character Balrog&#039;s catchphrase?",
-correct_answer: "Huzzah!",
-incorrect_answers: [
-"Yes!",
-"Whoa there!",
-"Nyeh heh heh!"
-]
-},
-{
-category: "Entertainment: Cartoon & Animations",
-type: "multiple",
-difficulty: "medium",
-question: "What Cartoon Network show aired its first episode on November 4th, 2013?",
-correct_answer: "Steven Universe",
-incorrect_answers: [
-"Regular Show",
-"Adventure Time",
-"The Amazing World of Gumball"
-]
-},
-{
-category: "History",
-type: "multiple",
-difficulty: "medium",
-question: "What was the transfer of disease, crops, and people across the Atlantic shortly after the discovery of the Americas called?",
-correct_answer: "The Columbian Exchange",
-incorrect_answers: [
-"Triangle Trade",
-"Transatlantic Slave Trade",
-"The Silk Road"
-]
-},
-{
-category: "Vehicles",
+category: "Entertainment: Music",
 type: "multiple",
 difficulty: "easy",
-question: "Which car tire manufacturer is famous for its &quot;Eagle&quot; brand of tires, and is the official tire supplier of NASCAR?",
-correct_answer: "Goodyear",
+question: "What is the best selling album of all time from 1976 to 2018?",
+correct_answer: "Thriller",
 incorrect_answers: [
-"Pirelli",
-"Bridgestone",
-"Michelin"
+"Back in Black",
+"Abbey Road",
+"The Dark Side of the Moon"
 ]
 },
 {
-category: "Vehicles",
+category: "Entertainment: Music",
 type: "multiple",
-difficulty: "hard",
-question: "What model was the sports car gifted to Yuri Gagarin by the French government in 1965?",
-correct_answer: "Matra Djet",
+difficulty: "easy",
+question: "Whose signature guitar technique is called the &quot;windmill&quot;?",
+correct_answer: "Pete Townshend",
 incorrect_answers: [
-"Porsche 911",
-"Alpine A110",
-"AC Cobra"
+"Jimmy Page",
+"Eddie Van Halen",
+"Jimi Hendrix"
 ]
 },
 {
-category: "Art",
+category: "Entertainment: Music",
 type: "multiple",
-difficulty: "medium",
-question: "Who painted the epic mural Guernica?",
-correct_answer: "Pablo Picasso",
+difficulty: "easy",
+question: "Which band recorded the album &quot;Parallel Lines&quot;?",
+correct_answer: "Blondie",
 incorrect_answers: [
-"Francisco Goya",
-"Leonardo da Vinci",
-"Henri Matisse"
+"Paramore",
+"Coldplay",
+"The Police"
+]
+},
+{
+category: "Entertainment: Music",
+type: "multiple",
+difficulty: "easy",
+question: "Who is the lead singer of Arctic Monkeys?",
+correct_answer: "Alex Turner",
+incorrect_answers: [
+"Jamie Cook",
+"Matt Helders",
+"Nick O&#039;Malley"
 ]
 }
 ]
