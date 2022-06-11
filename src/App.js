@@ -9,25 +9,21 @@ import './App.css';
 import logoImage from "./images/quizTimeLogo.png"
 
 const App = () => {
-    const [questions, setQuestions] = useState([]);
-    const [error, setError] = useState("");
-    //hold fetched questions - done
-    //have fetch calls - done
-    //have fetch call logic. - done for now
-    //for now just need to take in a number
+  const [questions, setQuestions] = useState([]);
+  const [error, setError] = useState("");
+
   const buildQuery = (queryParams) => {
     //saving space to later build complex API queries
     //queryParams should be a number of category at this point
-    console.log("question category to grab",queryParams)
     fetchQuestions(queryParams)
   }
 
 
   const fetchQuestions = (category) => {
     apiCalls.getQuestions(category)
-      // .then(response => utilities.cleanText(response))  
+      // .then(response => utilities.cleanText(response))
       .then(cleanResponse => setQuestions(cleanResponse))//set state of questions to response)
-      .catch(error => console.log("17",error)) //change to error set state??
+      .catch(error => console.log(error)) //change to error set state??
   }
 
   return (
