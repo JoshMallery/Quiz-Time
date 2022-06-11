@@ -84,9 +84,7 @@ If you are an instructor who struggles with an endless amount of paper documents
 ## Contributors
 
 - [Josh Mallery](https://github.com/JoshMallery)
-- [Tyler Tedesco](https://github.com/sted1994)
-- [Whitney Perricone](https://github.com/Wperricone)
 
 ## Image Credit
 
-- branchOut logo created by [Freelogodesign.org](https://www.freelogodesign.org/)
+- Quiz-Time logo created by [Freelogodesign.org](https://www.freelogodesign.org/)
