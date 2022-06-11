@@ -4,6 +4,7 @@ import SideBar from "./components/SideBar";
 import Form from "./components/Form";
 import TriviaContainer from "./components/TriviaContainer";
 import apiCalls from "./apiCalls.js";
+import utilities from "./utilities.js"
 import './App.css';
 import logoImage from "./images/quizTimeLogo.png"
 
@@ -24,17 +25,18 @@ const App = () => {
 
   const fetchQuestions = (category) => {
     apiCalls.getQuestions(category)
-      .then(response => setQuestions(response))//set state of questions to response)
-      .catch(error => console.log(error)) //change to error set state??
+      // .then(response => utilities.cleanText(response))  
+      .then(cleanResponse => setQuestions(cleanResponse))//set state of questions to response)
+      .catch(error => console.log("17",error)) //change to error set state??
   }
 
   return (
     <main className="App">
       <header className="header">
-        <img src={logoImage} alt="Quiz-Time Logo of a stack of books"/>
         <p>
         Where your trivia needs are served!
         </p>
+        <img src={logoImage} alt="Quiz-Time Logo of a stack of books"/>
       </header>
       <div className="content">
         <div className="sidebar-container">
