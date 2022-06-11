@@ -3,7 +3,7 @@ import categories from "./FormData/categories"
 import "./Form.css";
 
 const Form = ({buildQuery}) => {
-  const [questionAmount, setQuestionAmount] = useState(0)
+  const [questionAmount, setQuestionAmount] = useState(10)
   const [dropCat, setDropCat] = useState(0)
 
   let dropOptions = categories.map((item) => <option key={item.id} value={item.id}>{item.category}</option>)
@@ -15,7 +15,7 @@ const Form = ({buildQuery}) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    buildQuery(dropCat);
+    buildQuery(dropCat, questionAmount);
   }
 
   return(
@@ -33,7 +33,7 @@ const Form = ({buildQuery}) => {
           type="number"
           min="1"
           value={questionAmount}
-          placeholder="Number of questions"
+          placeholder="10"
           onChange={(event) => changeHandler(event)}
         />
         <br/>

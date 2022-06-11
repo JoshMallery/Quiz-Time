@@ -12,15 +12,15 @@ const App = () => {
   const [questions, setQuestions] = useState([]);
   const [error, setError] = useState("");
 
-  const buildQuery = (queryParams) => {
+  const buildQuery = (category,questionCount) => {
     //saving space to later build complex API queries
     //queryParams should be a number of category at this point
-    fetchQuestions(queryParams)
+    fetchQuestions(category,questionCount)
   }
 
 
-  const fetchQuestions = (category) => {
-    apiCalls.getQuestions(category)
+  const fetchQuestions = (category,questionCount) => {
+    apiCalls.getQuestions(category,questionCount)
       .then(response => utilities.cleanText(response))
       .then(cleanResponse => setQuestions(cleanResponse))//set state of questions to response)
       .catch(error => console.log(error)) //change to error set state??
