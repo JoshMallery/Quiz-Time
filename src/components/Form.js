@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import categories from "./FormData/categories"
 import "./Form.css";
 
-const Form = ({buildQuery}) => {
+const Form = ({buildQuery, prompt}) => {
   const [questionAmount, setQuestionAmount] = useState(10)
   const [dropCat, setDropCat] = useState(0)
 
@@ -32,15 +32,15 @@ const Form = ({buildQuery}) => {
           name="questionAmount"
           type="number"
           min="1"
+          max="50"
           value={questionAmount}
-          placeholder="10"
           onChange={(event) => changeHandler(event)}
         />
         <br/>
         <br/>
         <button onClick={(event)=> submitHandler(event)}>Submit!</button>
       </form>
-
+      { prompt && <h2>Time to go play trivia! Click the Play Trivia Link on the left to Begin!</h2>}
     </div>
   )
 

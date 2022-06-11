@@ -17,8 +17,9 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
   let radioAns = randomAns.map((ans,index) => {
     return (
       <>
-      <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
-      <label htmlFor={ans}>{ans}</label>
+        <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
+        <label htmlFor={ans}>{ans}</label>
+        <br/>
       </>)
     })
 
@@ -30,6 +31,7 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
     <div className="card">
       <p>{question}</p>
       {radioAns}
+      <br/>
       <button onClick={() => checkAns(selectedAns,curQuestion)}>Submit Answer</button>
     </div>
   )
