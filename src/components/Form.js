@@ -2,40 +2,45 @@ import React, { useState, useEffect } from "react";
 import categories from "./FormData/categories"
 import "./Form.css";
 
-const Form = ({buildQuery}) => {
-  const [category, setCategory] = useState(0)
+const Form = ({buildQuery, prompt}) => {
+  const [questionAmount, setQuestionAmount] = useState(10)
   const [dropCat, setDropCat] = useState(0)
 
   let dropOptions = categories.map((item) => <option key={item.id} value={item.id}>{item.category}</option>)
   dropOptions.unshift(<option key="0" value="0">--Please Select a Category --</option>)
 
   const changeHandler = (event) => {
-    event.target.name === "category" ? setCategory(event.target.value) : setDropCat(event.target.value)
+    event.target.name === "questionAmount" ? setQuestionAmount(event.target.value) : setDropCat(event.target.value)
   }
 
   const submitHandler = (event) => {
     event.preventDefault();
-    buildQuery(dropCat);
+    buildQuery(dropCat, questionAmount);
   }
 
   return(
     <div>
       <form>
+        <p>Trivia Categories to select from: </p>
         <select name="dropCategory" onChange={(event) => changeHandler(event)}>
           {dropOptions}
         </select>
         <br/>
+        <br/>
+        <p>Select the number of Trivia questions:</p>
         <input
-          name="category"
+          name="questionAmount"
           type="number"
-          min="9"
-          value={category}
-          placeholder="write a number of category"
+          min="1"
+          max="50"
+          value={questionAmount}
           onChange={(event) => changeHandler(event)}
         />
+        <br/>
+        <br/>
         <button onClick={(event)=> submitHandler(event)}>Submit!</button>
       </form>
-      <p>Form checking in!!</p>
+      { prompt && <h2>Time to go play trivia! Click the Play Trivia Link on the left to Begin!</h2>}
     </div>
   )
 

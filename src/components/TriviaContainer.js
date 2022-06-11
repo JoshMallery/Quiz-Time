@@ -2,6 +2,9 @@ import React, { useState, useEffect} from "react";
 import Card from "./Card";
 import Score from "./Score";
 import "./TriviaContainer.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
 
 const TriviaContainer = ({questions}) => {
   const [record, setRecord] = useState({ wins:0 , losses:0 }); //wins and losses
@@ -13,7 +16,7 @@ const TriviaContainer = ({questions}) => {
 
   const questionCards = questions.map((question,index) => <Card key={index} {...question} count={count} curQuestion={index} checkAns={checkAns} />);
 
-  //try having a sort for the answers at this level. 
+  //try having a sort for the answers at this level.
 
   // const calcScore = (boolean) => {
   //   // if(curQuestion === count) {
@@ -50,8 +53,10 @@ const TriviaContainer = ({questions}) => {
 
   return (
     <div>
-      {questionCards}
-      <Score record={record}/>
+    <Score record={record}/>
+        <Carousel>
+        {questionCards}
+        </Carousel>
     </div>
   )
 

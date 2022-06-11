@@ -17,7 +17,7 @@ useEffect(()=> {
 
   return (
     <div className="score">
-      <p>Correct Questions:{record.wins}</p>
+      <p>Correct Questions: {record.wins}</p>
       <p>Incorrect Questions: {record.losses}</p>
       <p>Total questions: {record.wins + record.losses}</p>
     </div>

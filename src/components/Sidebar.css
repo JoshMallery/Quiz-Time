@@ -1,3 +1,23 @@
-.nav-button {
+.nav-button, button {
   text-decoration: none;
+  color: purple;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 25px;
+
+}
+
+.nav-button:hover, .nav-button.active {
+  text-decoration: none;
+  color: white;
+  background-color: #c55cc5;
+  border-radius: 8px;
+  padding: 5px;
+  margin:25px
+
+}
+
+.nav-button.active {
+  text-decoration: underline;
 }
