@@ -21,6 +21,7 @@ const utilities = {
   stringCleaner(stringToClean) {
       let cleanedString = stringToClean.replace(/&quot;/ig,'\"');
           cleanedString = cleanedString.replace(/&#039;/ig,"\'");
+          cleanedString = cleanedString.replace(/&amp;/ig,"\&");
       return cleanedString;
   }
 
