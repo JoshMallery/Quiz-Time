@@ -34,7 +34,7 @@ it('should be able to select trivia and submit it', () => {
 
   cy.get('button').click()
 
-  cy.get('h2').eq(1).contains("Time to go play trivia! Click the Play Trivia Link on the left to Begin!")
+  cy.get('h2').eq(1).contains("Time to go play trivia! Click the Play Trivia Link to Begin!")
 })
 
 

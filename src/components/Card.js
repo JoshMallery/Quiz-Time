@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
-import "./Card.css"
+import React, { useState, useEffect } from "react";
+import "./Card.css";
+import PropTypes from 'prop-types';
+
 
 const Card = ({checkAns,category,correct_answer,incorrect_answers,question, count, curQuestion}) => {
   const [selectedAns, setAnswer] = useState(null);
-  const [randomAns, setRandomAns] = useState([])
-
+  const [randomAns, setRandomAns] = useState([]);
 
  useEffect(() => {
    if(!count) {
@@ -39,3 +40,13 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
 }
 
 export default Card;
+
+Card.propTypes = {
+  checkAns: PropTypes.func,
+  category: PropTypes.string,
+  correct_answer: PropTypes.string,
+  incorrect_answers: PropTypes.array,
+  question: PropTypes.string,
+  count: PropTypes.number,
+  curQuestion: PropTypes.number
+};

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./Sidebar.css"
 
 const SideBar = () => {
-//considering deleting the link to the welcome page
   return (
     <div className="sidebar">
     <br/>
@@ -21,7 +20,6 @@ const SideBar = () => {
       <NavLink className="nav-button" to="/trivia">
         Play Trivia
       </NavLink>
-
     </div>
   )
 

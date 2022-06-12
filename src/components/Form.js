@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import categories from "./FormData/categories"
+import categories from "./FormData/categories";
+import PropTypes from 'prop-types';
 import "./Form.css";
 
 const Form = ({ fetchQuestions, prompt }) => {
@@ -40,7 +41,7 @@ const Form = ({ fetchQuestions, prompt }) => {
         <br/>
         <button onClick={(event)=> submitHandler(event)}>Submit!</button>
       </form>
-      {prompt && <h2>Time to go play trivia! Click the Play Trivia Link on the left to Begin!</h2>}
+      {prompt && <h2>Time to go play trivia! Click the Play Trivia Link to Begin!</h2>}
     </div>
   )
 
@@ -48,3 +49,8 @@ const Form = ({ fetchQuestions, prompt }) => {
 }
 
 export default Form;
+
+Form.propTypes = {
+  fetchQuestions: PropTypes.func,
+  prompt: PropTypes.bool
+};

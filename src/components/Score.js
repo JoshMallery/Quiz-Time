@@ -1,19 +1,8 @@
-import React , { useEffect } from "react"
-import "./Score.css"
+import React , { useEffect } from "react";
+import PropTypes from 'prop-types';
+import "./Score.css";
 
 const Score = ({ record }) => {
-
-//pass down if right or wrong,
-//if right say correct
-//if wrong give correct answer
-//give updated score? score passed as prop
-
-//look at previous score? i wins increased say correct, if losses increased say incorrect?
-
-useEffect(()=> {
-
-
-},[record])
 
   return (
     <div className="score">
@@ -26,3 +15,7 @@ useEffect(()=> {
 }
 
 export default Score;
+
+Score.propTypes = {
+  record: PropTypes.object
+};

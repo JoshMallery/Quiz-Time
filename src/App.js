@@ -5,20 +5,13 @@ import Form from "./components/Form";
 import TriviaContainer from "./components/TriviaContainer";
 import apiCalls from "./apiCalls.js";
 import utilities from "./utilities.js"
-import './App.css';
 import logoImage from "./images/quizTimeLogo.png"
+import './App.css';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
   const [error, setError] = useState("");
   const [prompt, setPrompt] = useState(false)
-
-  // const buildQuery = (category,questionCount) => {
-  //   //saving space to later build complex API queries
-  //   //queryParams should be a number of category at this point
-  //   fetchQuestions(category,questionCount)
-  // }
-
 
   const fetchQuestions = (category,questionCount) => {
     setPrompt(true)
@@ -32,7 +25,7 @@ const App = () => {
     <main className="App">
       <header className="header">
         <img src={logoImage} alt="Quiz-Time Logo of a stack of books"/>
-        <h2>
+        <h2 className="heading-text">
         Quiz-Time!
         <br/>
         <br/>
@@ -45,7 +38,7 @@ const App = () => {
         </div>
         <div className="routes">
           <Switch>
-            <Route exact path="/" render={() => <h1>Welcome to Quiz Time! All of your Trivia Needs can be had here! Use the navigation on the left hand side to get started!</h1>} />
+            <Route exact path="/" render={() => <h1>Welcome to Quiz Time! All of your Trivia Needs can be had here! Use the navigation links to get started!</h1>} />
             <Route path ="/settings" render={() => <Form fetchQuestions={fetchQuestions} prompt={prompt}/>} />
             <Route path ="/trivia" render={() =>  {
                 if(error) {
@@ -55,7 +48,7 @@ const App = () => {
                }
               }}
             />
-            <Route render={() => <h2>No Trivia here! Use the Navigation Buttons on the Left to get back on your way!</h2>} />
+            <Route render={() => <h2>No Trivia here! Use the Navigation Links to get back on your way!</h2>} />
           </Switch>
         </div>
       </div>
