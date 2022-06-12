@@ -10,7 +10,7 @@ const categories = [
   {"id":"16", "category":"Entertainment: Board Games"},
   {"id":"17","category":"Science & Nature"},
   {"id":"18","category":"Science: Computers"},
-  {"id":"19","category":"Science: Mathematics<"},
+  {"id":"19","category":"Science: Mathematics"},
   {"id":"20","category":"Mythology"},
   {"id":"21","category":"Sports"},
   {"id":"22","category":"Geography"},

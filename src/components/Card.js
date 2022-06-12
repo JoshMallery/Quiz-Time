@@ -5,22 +5,22 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
   const [selectedAns, setAnswer] = useState(null);
   const [randomAns, setRandomAns] = useState([])
 
-  let buildRandomAns = [...incorrect_answers,correct_answer]
-      buildRandomAns.sort((a, b) => 0.5 - Math.random());
 
  useEffect(() => {
    if(!count) {
+     let buildRandomAns = [...incorrect_answers,correct_answer]
+     buildRandomAns.sort((a, b) => 0.5 - Math.random());
      setRandomAns(buildRandomAns)
     }
   },[count])
 
   let radioAns = randomAns.map((ans,index) => {
     return (
-      <>
-        <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
+      <div key={index}>
+        <input onChange={() => onChangeHandler(ans)} type="radio" id={ans} name="question" value={ans} />
         <label htmlFor={ans}>{ans}</label>
         <br/>
-      </>)
+      </div>)
     })
 
   const onChangeHandler = (ans) => {
