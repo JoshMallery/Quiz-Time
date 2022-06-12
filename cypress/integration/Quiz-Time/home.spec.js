@@ -37,6 +37,9 @@ describe('Home Page Tests', () => {
       .should('eq','http://localhost:3000/Quiz-Time/settings')
   });
 
-
+  it('Should get a 404 message if a wrong URL is navigated to', () => {
+    cy.visit('http://localhost:3000/Quiz-Time/invalid')
+    cy.get('h2').eq(1).contains('No Trivia here! Use the Navigation Buttons on the Left to get back on your way!')
+  })
 
 })

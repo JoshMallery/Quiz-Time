@@ -1,6 +1,5 @@
 describe('Settings Page Tests', () => {
   beforeEach(() => {
-    cy.intercept('https://opentdb.com/api.php?amount=5&category=12&difficulty=easy&type=multiple', { fixtures: "questions" }) //actually not needed for home page test
     cy.visit('http://localhost:3000/Quiz-Time/settings')
   })
 
