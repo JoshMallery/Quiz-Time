@@ -4,7 +4,10 @@
 
 ## Overview
 
-If you are an instructor who struggles with an endless amount of paper documents to keep track of for all the impressive lessons you write, might we suggest you go out on a limb and trust branchOut with all your lesson planning needs! It's as simple as visiting the branchOut website to view courses and the lessons which go along with them, or if you're ready to write a whole new course, just click on the 'Add New Course' tab. This will allow you to enter your amazing content and write as many lessons as you need to go along with it. If you need some time to create new lesson ideas it is very easy to come back and add lessons to an existing course. Your genius plans will be safely stored in the branchOut database.
+Do you have some extra time! Don't have an idea for your next ice-breaker? You need to play Quiz-Time! It's the perfect use of a few extra minutes to test your knowledge of Trivia!
+
+This React App let's you pick categories of Trivia as well as the amount of questions you want! Then you are all setup to answer the questions and get graded as you go.
+
 
 ### [Quiz-Time FrontEnd Deploy Link](https://joshmallery.github.io/Quiz-Time/)
 
@@ -49,21 +52,21 @@ If you are an instructor who struggles with an endless amount of paper documents
 - Inside of your terminal type `git clone` and then paste the ssh link. It should look like this: [git@github.com:JoshMallery/Quiz-Time.git](git@github.com:JoshMallery/Quiz-Time.git)
 - In your terminal type `cd quiz-time`
 - Type `npm install`
-- Do not run `npm audit fix --force`
+- Do NOT run `npm audit fix --force`
 - Then type `npm start` This runs the app in the development mode.
 - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - The browser should then deploy using a local host
-- Enjoy using branchOut!
+- Enjoy using Quiz-Time!
 
 - NOTE: Make sure that you type `Control + C` in your terminal when you are done using the application. This ensure the server will stop running before your close your Terminal.
 
 ## Instructions for Use
 
-- On opening the browser, a user is free to scroll the current courses that exist in branchOut!
-- Each Course includes and overview and Author and lesson count.
-- A user can click on the course to view the list of lessons.
-- From there a user can click on individual lessons from the course.
-- Users can also navigate to the add a course tab and add a course and/or a lesson.  
+- On opening the browser, you can navigate to the Trivia Settings Link.
+- From the settings page you are free to select a category and the amount of questions to answer.
+- After clicking submit to get the questions ready, go to the Play Trivia Link
+- You are all ready to play! Select an answer to a trivia question, submit it be scored and then click the navigation arrow to the next question!
+- Good Luck! Can you get a perfect score?
 
 ## Technologies Used
 
@@ -93,7 +96,7 @@ If you are an instructor who struggles with an endless amount of paper documents
 ![GameView Quiz-Time](https://user-images.githubusercontent.com/96563007/173248908-f8e8c110-6656-4a98-82e1-419b5a3bcdc7.png)
 
 
-## Contributors
+## Contributor
 
 - [Josh Mallery](https://github.com/JoshMallery)
 
