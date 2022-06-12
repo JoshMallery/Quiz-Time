@@ -5,11 +5,11 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
   const [selectedAns, setAnswer] = useState(null);
   const [randomAns, setRandomAns] = useState([])
 
-  let buildRandomAns = [...incorrect_answers,correct_answer]
-      buildRandomAns.sort((a, b) => 0.5 - Math.random());
 
  useEffect(() => {
    if(!count) {
+     let buildRandomAns = [...incorrect_answers,correct_answer]
+     buildRandomAns.sort((a, b) => 0.5 - Math.random());
      setRandomAns(buildRandomAns)
     }
   },[count])
