@@ -5,20 +5,13 @@ import Form from "./components/Form";
 import TriviaContainer from "./components/TriviaContainer";
 import apiCalls from "./apiCalls.js";
 import utilities from "./utilities.js"
-import './App.css';
 import logoImage from "./images/quizTimeLogo.png"
+import './App.css';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
   const [error, setError] = useState("");
   const [prompt, setPrompt] = useState(false)
-
-  // const buildQuery = (category,questionCount) => {
-  //   //saving space to later build complex API queries
-  //   //queryParams should be a number of category at this point
-  //   fetchQuestions(category,questionCount)
-  // }
-
 
   const fetchQuestions = (category,questionCount) => {
     setPrompt(true)
@@ -32,7 +25,7 @@ const App = () => {
     <main className="App">
       <header className="header">
         <img src={logoImage} alt="Quiz-Time Logo of a stack of books"/>
-        <h2>
+        <h2 className="heading-text">
         Quiz-Time!
         <br/>
         <br/>
