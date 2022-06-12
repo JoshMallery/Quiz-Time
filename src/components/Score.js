@@ -6,9 +6,11 @@ const Score = ({ record }) => {
 
   return (
     <div className="score">
+      <br/>
       <p>Correct Questions: {record.wins}</p>
       <p>Incorrect Questions: {record.losses}</p>
       <p>Total questions: {record.wins + record.losses}</p>
+      <br/>
     </div>
   )
 
