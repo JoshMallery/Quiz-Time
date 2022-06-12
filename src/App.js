@@ -13,15 +13,15 @@ const App = () => {
   const [error, setError] = useState("");
   const [prompt, setPrompt] = useState(false)
 
-  const buildQuery = (category,questionCount) => {
-    //saving space to later build complex API queries
-    //queryParams should be a number of category at this point
-    setPrompt(true)
-    fetchQuestions(category,questionCount)
-  }
+  // const buildQuery = (category,questionCount) => {
+  //   //saving space to later build complex API queries
+  //   //queryParams should be a number of category at this point
+  //   fetchQuestions(category,questionCount)
+  // }
 
 
   const fetchQuestions = (category,questionCount) => {
+    setPrompt(true)
     apiCalls.getQuestions(category,questionCount)
       .then(response => utilities.cleanText(response))
       .then(cleanResponse => setQuestions(cleanResponse))
@@ -46,7 +46,7 @@ const App = () => {
         <div className="routes">
           <Switch>
             <Route exact path="/" render={() => <h1>Welcome to Quiz Time! All of your Trivia Needs can be had here! Use the navigation on the left hand side to get started!</h1>} />
-            <Route path ="/settings" render={() => <Form buildQuery={buildQuery} prompt={prompt}/>} />
+            <Route path ="/settings" render={() => <Form fetchQuestions={fetchQuestions} prompt={prompt}/>} />
             <Route path ="/trivia" render={() =>  {
                 if(error) {
                   return <h2>Server is Down, Please try again later.</h2>

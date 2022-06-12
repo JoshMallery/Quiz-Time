@@ -16,11 +16,11 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
 
   let radioAns = randomAns.map((ans,index) => {
     return (
-      <>
-        <input onChange={() => onChangeHandler(ans)} key={index} type="radio" id={ans} name="question" value={ans} />
+      <div key={index}>
+        <input onChange={() => onChangeHandler(ans)} type="radio" id={ans} name="question" value={ans} />
         <label htmlFor={ans}>{ans}</label>
         <br/>
-      </>)
+      </div>)
     })
 
   const onChangeHandler = (ans) => {

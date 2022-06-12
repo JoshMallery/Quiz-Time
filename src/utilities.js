@@ -1,7 +1,6 @@
 const utilities = {
 
   cleanText(response) {
-    console.log(response)
     const cleanedResponse = response.map(triviaQuestion => {
       triviaQuestion.question = this.stringCleaner(triviaQuestion.question)
       triviaQuestion.correct_answer = this.stringCleaner(triviaQuestion.correct_answer)

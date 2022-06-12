@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import categories from "./FormData/categories"
 import "./Form.css";
 
-const Form = ({buildQuery, prompt}) => {
+const Form = ({ fetchQuestions, prompt }) => {
   const [questionAmount, setQuestionAmount] = useState(10)
   const [dropCat, setDropCat] = useState(0)
 
@@ -15,7 +15,7 @@ const Form = ({buildQuery, prompt}) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    buildQuery(dropCat, questionAmount);
+    fetchQuestions(dropCat, questionAmount);
   }
 
   return(
@@ -40,7 +40,7 @@ const Form = ({buildQuery, prompt}) => {
         <br/>
         <button onClick={(event)=> submitHandler(event)}>Submit!</button>
       </form>
-      { prompt && <h2>Time to go play trivia! Click the Play Trivia Link on the left to Begin!</h2>}
+      {prompt && <h2>Time to go play trivia! Click the Play Trivia Link on the left to Begin!</h2>}
     </div>
   )
 
