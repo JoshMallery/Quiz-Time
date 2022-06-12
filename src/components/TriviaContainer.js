@@ -4,6 +4,7 @@ import Score from "./Score";
 import "./TriviaContainer.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; //require a loader???
 import { Carousel } from 'react-responsive-carousel';
+import PropTypes from 'prop-types';
 
 
 const TriviaContainer = ({ questions }) => {
@@ -35,3 +36,7 @@ const TriviaContainer = ({ questions }) => {
 
 
 export default TriviaContainer;
+
+TriviaContainer.propTypes = {
+  questions: PropTypes.array
+};

@@ -1,5 +1,6 @@
-import React , { useEffect } from "react"
-import "./Score.css"
+import React , { useEffect } from "react";
+import PropTypes from 'prop-types';
+import "./Score.css";
 
 const Score = ({ record }) => {
 
@@ -26,3 +27,7 @@ useEffect(()=> {
 }
 
 export default Score;
+
+Score.propTypes = {
+  record: PropTypes.object
+};

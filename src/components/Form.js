@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import categories from "./FormData/categories"
+import categories from "./FormData/categories";
+import PropTypes from 'prop-types';
 import "./Form.css";
 
 const Form = ({ fetchQuestions, prompt }) => {
@@ -48,3 +49,8 @@ const Form = ({ fetchQuestions, prompt }) => {
 }
 
 export default Form;
+
+Form.propTypes = {
+  fetchQuestions: PropTypes.func,
+  prompt: PropTypes.bool
+};
