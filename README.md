@@ -8,35 +8,46 @@ If you are an instructor who struggles with an endless amount of paper documents
 
 ### [Quiz-Time FrontEnd Deploy Link](https://joshmallery.github.io/Quiz-Time/)
 
-## Project Views
+## Project View
 
-### Dashboard with Course and Lesson Views:
-![Dashboard and Course gif](https://user-images.githubusercontent.com/96563007/172274866-e662238f-11ad-4956-9412-d739de0b1d55.gif)
+### Settings Page and Starting a Game of Trivia:
 
-### Add a Form:
-![Form Errors](https://user-images.githubusercontent.com/96563007/172274890-ab541712-33cb-489e-a05f-e759afd28491.gif)
+![QuizTime Game Play](https://user-images.githubusercontent.com/96563007/173249462-6c032d88-5d0e-4be5-9bc5-fb5199415a08.gif)
 
+### Error Handling:
+
+![Error Handling Quiz Time](https://user-images.githubusercontent.com/96563007/173249461-e2c523b7-065d-4c5c-ba2c-ff24c5bf375b.gif)
+
+### App Responsive Design:
+
+![Responsive Design](https://user-images.githubusercontent.com/96563007/173249464-c1fc2c1a-7105-440b-8a9c-6ca30f92a8ea.gif)
 
 
 ## React
 
-- This multi page App with React was an exercise for us to learn and grow our knowledge of interacting with endpoints that were created from our API.
+- This multi page App with:
+  - React
+  - React Router
+  - React PropTypes
+  - React Hooks
+  - React Responsive Carousel
 
 
 ## Cypress Testing
 
 - All Testing of User views and user interactions
+- Game Play is tested
 - Error Handling of Server errors and invalid URLS Tested
-- Fetch requests are stubbed
+- Fetch request is intercepted and stubbed
 
-![branchOutTesting](https://user-images.githubusercontent.com/96563007/172269234-2833d634-4807-4a16-8a2f-f7195d21c53a.gif)
+![Quiz-Time Testing](https://user-images.githubusercontent.com/96563007/173248985-06f072da-3bfb-493f-9da8-76569bcf7699.gif)
 
 ## Local Set-Up Instructions
 
 - From the repo click the code button and copy the SSH link.
 - Open terminal by pressing command + space bar, and search for terminal
-- Inside of your terminal type `git clone` and then paste the ssh link. It should look like this: [git@github.com:JoshMallery/BranchOut.git](git@github.com:JoshMallery/BranchOut.git)
-- In your terminal type `cd branchOut`
+- Inside of your terminal type `git clone` and then paste the ssh link. It should look like this: [git@github.com:JoshMallery/Quiz-Time.git](git@github.com:JoshMallery/Quiz-Time.git)
+- In your terminal type `cd quiz-time`
 - Type `npm install`
 - Do not run `npm audit fix --force`
 - Then type `npm start` This runs the app in the development mode.
@@ -58,28 +69,29 @@ If you are an instructor who struggles with an endless amount of paper documents
 
 - React
 - React Router
+- React PropTypes
+- React Responsive Carousel
+- Responsive Layout
 - Cypress Testing
-- GET requests
-- POST requests
-- DELETE requests
+- GET request
+- Fetch Web API
 - ES6 JavaScript
 - CSS
 - HTML
-- Fetch Web API
-
-## Future Features
-
-- User Login Page for Teachers or Students
-- Teacher and Student User Permissions, Student - read-only access
 
 ## Project Management
 
-- We used a [Github Project Board](https://github.com/JoshMallery/BranchOut/projects/1) stay on task and meet the deadlines.
+- [Github Project Board](https://github.com/JoshMallery/Quiz-Time/projects/1) was used to stay on task.
 
 ### Figma WireFrame
-![DashboardView](https://user-images.githubusercontent.com/96563007/172260248-35226b8f-aee1-4b84-84eb-6a80c3ea589f.png)
+- Settings View
 
-![LessonView](https://user-images.githubusercontent.com/26700819/172275259-ebc9f658-f1eb-4773-a391-da38fcabcd87.png)
+![SettingsView Quiz-Time](https://user-images.githubusercontent.com/96563007/173248919-f1adaf52-fde3-446c-b76e-c0ca1bb87d02.png)
+
+-In Game View
+
+![GameView Quiz-Time](https://user-images.githubusercontent.com/96563007/173248908-f8e8c110-6656-4a98-82e1-419b5a3bcdc7.png)
+
 
 ## Contributors
 
