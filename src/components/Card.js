@@ -13,6 +13,7 @@ const Card = ({checkAns,category,correct_answer,incorrect_answers,question, coun
      buildRandomAns.sort((a, b) => 0.5 - Math.random());
      setRandomAns(buildRandomAns)
     }
+    //eslint-disable-next-line
   },[count])
 
   let radioAns = randomAns.map((ans,index) => {

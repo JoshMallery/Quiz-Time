@@ -18,8 +18,11 @@ const utilities = {
   },
 
   stringCleaner(stringToClean) {
+    // eslint-disable-next-line
     let cleanedString = stringToClean.replace(/&quot;/ig,'\"');
+    // eslint-disable-next-line
         cleanedString = cleanedString.replace(/&#039;/ig,"\'");
+    // eslint-disable-next-line
         cleanedString = cleanedString.replace(/&amp;/ig,"\&");
     return cleanedString;
   }
