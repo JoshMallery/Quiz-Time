@@ -22,7 +22,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "start-server": "npm start",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start-server http://localhost:3000 cy:run"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
   },
   "devDependencies": {
     "cypress": "^9.6.1",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
