@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d build",
     "cypress:open": "cypress open",
     "start-server": "npm start",
-    "cy:run": "cypress run",
+    "cy:run": "cypress:open",
     "test": "start-server-and-test start-server http://localhost:3000 cy:run"
   },
   "eslintConfig": {
